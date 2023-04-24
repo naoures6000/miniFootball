@@ -9,7 +9,7 @@ route.get('/getplayer',verifyToken,getAllPlayers)
 
 route.get('/getplayer/:id',verifyToken ,findoneP)
 
-
+// hi
  route.delete('/deleteplayer/:id',verifyToken ,deleteone)
  route.delete('/deleteplayers',verifyToken ,deleteall)
  route.put('/updateplayer/:id',verifyToken ,updatePlayer)
