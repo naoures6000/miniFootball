@@ -26,6 +26,11 @@ function generatetoken(user){
       next();
     });
   };
+
+  exports.addEvent=async(req,res)=>{
+    const addevent= EventModel.create(req.body)
+    res.status(200).json({data:addevent})
+  }
   
   // Define the route to get all players
   exports.getAllEvents = (req, res, next) => {
