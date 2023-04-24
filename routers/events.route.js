@@ -11,5 +11,5 @@ route.get('/getevent/:id',verifyToken ,findoneE)
 
  route.delete('/deleteevent/:id',verifyToken ,deleteone)
  route.delete('/deleteevents',verifyToken ,deleteall)
- route.patch('/updateevent/:id',verifyToken ,updateEvent)
+ route.put('/updateevent/:id',verifyToken ,updateEvent)
 module.exports=route

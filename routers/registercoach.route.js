@@ -12,5 +12,5 @@ route.get('/getcoach/:id',verifyToken ,findoneC)
 
  route.delete('/deletecoach/:id',verifyToken ,deleteone)
  route.delete('/deletecoachs',verifyToken ,deleteall)
- route.patch('/updatecoach/:id',verifyToken ,updateCoach)
+ route.put('/updatecoach/:id',verifyToken ,updateCoach)
 module.exports=route

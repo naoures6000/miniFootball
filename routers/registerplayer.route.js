@@ -12,5 +12,5 @@ route.get('/getplayer/:id',verifyToken ,findoneP)
 
  route.delete('/deleteplayer/:id',verifyToken ,deleteone)
  route.delete('/deleteplayers',verifyToken ,deleteall)
- route.patch('/updateplayer/:id',verifyToken ,updatePlayer)
+ route.put('/updateplayer/:id',verifyToken ,updatePlayer)
 module.exports=route
