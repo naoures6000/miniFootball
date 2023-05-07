@@ -4,7 +4,7 @@ require("dotenv").config()
 const playerRoute=require('./routers/registerplayer.route')
 const coachRoute=require('./routers/registercoach.route')
 const eventsRoute=require('./routers/events.route')
-
+const eliteplayerRoute=require('./routers/eliteplayer.route')
 const eliteRoute=require('./routers/elite.route')
 const app=express()
 const cors = require("cors")
@@ -38,7 +38,7 @@ mongoose
 app.use('/',playerRoute)
 app.use('/',coachRoute)
 app.use('/',eventsRoute)
-
+app.use('/',eliteplayerRoute)
 app.use('/',eliteRoute)
 
 

@@ -20,7 +20,7 @@ let schemaelite=mongoose.Schema({
     equipe:String
 })
 
-var Elite=mongoose.model('elite',schemaelite)
+const Elite=mongoose.model('Elite',schemaelite)
 
 let url='mongodb://127.0.0.1:27017/Minifoot'
 
@@ -126,5 +126,7 @@ exports.updateOneelite=async(playername,region,equipe)=>{
         })
     })
 }
+
+module.exports = Elite;
 
 

@@ -24,13 +24,6 @@ let schemaplayer=mongoose.Schema({
     category:String,
     phone: {
         type: String,
-        required: true,
-        validate: {
-        validator: function(v) {
-        return /^(\+\d{1,3}[- ]?)?\d{8}$/.test(v); // Regex to check if the input is a valid phone number format
-        },
-        message: props => `${props.value} is not a valid phone number format!`
-        },
         maxlength: 8 // Limit the length of the phone number to 10 characters
         },
     password:String,
