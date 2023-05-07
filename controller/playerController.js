@@ -3,7 +3,19 @@ const PlayerModel=require('../models/registerplayer.model')
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 require("dotenv").config()
-const multer = require("multer");
+/*const multer = require("multer");
+filename='';
+const mystorage=multer.diskStorage({
+  destination:'./uploads',
+  filename:(req,file,redirect)=>{
+    let date= Date.now();
+    let fl= date + '.' + file.mimetype.split('/')[1];
+    redirect(null,fl);
+    filename=fl;
+  }
+})
+
+const upload=multer({storage:mystorage});*/
 
 const secret =process.env.secret
 function generatetoken(user){
@@ -11,7 +23,7 @@ function generatetoken(user){
   return token
 }
  
-exports.register = (req, res, next) => {
+exports.register = /*(upload.single('picture'))*/(req, res, next) => {
     const { firstname, lastname, category, phone, picture, email, password } = req.body;
   
     // check if the email already exists in the database
